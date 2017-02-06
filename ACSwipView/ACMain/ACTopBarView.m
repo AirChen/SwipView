@@ -66,6 +66,7 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
     CGFloat imageViewHeight = self.frame.size.height - ItemsBarHeight;
     self.themeImageView.frame = CGRectMake(0, 0, ScreenWidth, imageViewHeight);
     self.itemsScrollView.frame = CGRectMake(0, imageViewHeight, ScreenWidth, ItemsBarHeight);

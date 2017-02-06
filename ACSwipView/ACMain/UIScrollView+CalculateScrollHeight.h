@@ -1,5 +1,5 @@
 //
-//  ACDemoTableView.h
+//  UIScrollView+CalculateScrollHeight.h
 //  ACSwipView
 //
 //  Created by AirChen on 2017/2/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACDemoTableView : UITableView
-
-@property (nonatomic, copy)NSArray *cellsArray;
+@interface UIScrollView (CalculateScrollHeight)
 
 @end

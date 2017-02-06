@@ -6,6 +6,8 @@
 //  Copyright © 2017年 AirChen. All rights reserved.
 //
 
+#import <objc/runtime.h>
+
 #ifndef GoldHeader_h
 #define GoldHeader_h
 
@@ -35,7 +37,21 @@
 #define UIColorTheme8 UIColorMake(172, 143, 239) // Lavender
 #define UIColorTheme9 UIColorMake(238, 133, 193) // Pink Rose
 
+/* NotificationCenter */
+#define ScrollHeightChange @"scrollOffsetY"
+#define ScrollHeightKey @"yNum"
+
 /* others */
 #define Weakify(o) __weak typeof(o) o##Weak = o;
-
 #define Strongify(o) __strong typeof(o) o = o##Weak;
+
+static inline void ReplaceMethod(Class _class, SEL _originSelector, SEL _newSelector) {
+    Method oriMethod = class_getInstanceMethod(_class, _originSelector);
+    Method newMethod = class_getInstanceMethod(_class, _newSelector);
+    BOOL isAddedMethod = class_addMethod(_class, _originSelector, method_getImplementation(newMethod), method_getTypeEncoding(newMethod));
+    if (isAddedMethod) {
+        class_replaceMethod(_class, _newSelector, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
+    } else {
+        method_exchangeImplementations(oriMethod, newMethod);
+    }
+}

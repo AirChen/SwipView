@@ -94,6 +94,33 @@
     self.pagingEnabled = YES;
 }
 
+#pragma mark - notification
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentViewHeightChange:) name:ScrollHeightChange object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:ScrollHeightChange];
+}
+
+- (void)contentViewHeightChange:(NSNotification *)noti
+{
+    NSNumber *yNumber = noti.userInfo[ScrollHeightKey];
+    CGFloat offsetY = [yNumber floatValue];
+    
+    NSLog(@"%f",offsetY);
+    
+    if (offsetY < -ItemsBarHeight) {
+        CGSize topViewSize = self.topBarView.frame.size;
+        CGPoint topViewPoint = self.topBarView.frame.origin;
+        self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight+offsetY), topViewSize.width, topViewSize.height);
+    }
+}
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -102,11 +129,17 @@
     CGSize topViewSize = self.topBarView.frame.size;
     CGPoint topViewPoint = self.topBarView.frame.origin;
     self.topBarView.frame = CGRectMake(contentOffsetX, topViewPoint.y, topViewSize.width, topViewSize.height);
-    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGFloat contentOffsetX = scrollView.contentOffset.x;
+
     NSUInteger buttonIndex = contentOffsetX/ScreenWidth;
     if (buttonIndex != self.selectedTopBarItemIndex) {
         [self.topBarView selectedButtonIndex:buttonIndex];
     }
     self.selectedTopBarItemIndex = buttonIndex;
 }
+
 @end
