@@ -2,44 +2,78 @@
 //  ACMainScrollView.m
 //  ACSwipView
 //
-//  Created by AirChen on 2017/2/4.
+//  Created by AirChen on 2017/2/6.
 //  Copyright © 2017年 AirChen. All rights reserved.
 //
 
 #import "ACMainScrollView.h"
 #import "GoldHeader.h"
+#import "ACTopBarView.h"
 
 @interface ACMainScrollView()<UIScrollViewDelegate>
+
+@property(nonatomic, strong)ACTopBarView *topBarView;
+@property (nonatomic, assign)NSInteger selectedTopBarItemIndex;
 
 @end
 
 @implementation ACMainScrollView
-
-- (UIView *)backView
+#pragma mark - lazy load
+- (ACTopBarView *)topBarView
 {
-    if (!_backView) {
-        _backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    if (!_topBarView) {
+        _topBarView = [[ACTopBarView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, TopBarHeight)];
         
-        _backView.backgroundColor = [UIColor yellowColor];
+        Weakify(self)
+        _topBarView.itemsClicked = ^(NSUInteger index){
+            Strongify(self);
+            self.contentOffset = CGPointMake(index*ScreenWidth, 0);
+        };
     }
-    return _backView;
+    return _topBarView;
 }
 
-- (UIView *)mainView
+#pragma mark - open slots
+- (void)setViewsArray:(NSMutableArray *)viewsArray
 {
-    if (!_mainView) {
-        _mainView = [[UIView alloc] initWithFrame:CGRectMake(ScreenWidth, 0, ScreenWidth, ScreenHeight)];
-        
-        _mainView.backgroundColor = [UIColor orangeColor];
+    _viewsArray = viewsArray;
+    /*
+     初始化scrollview，contentSize
+     修改每个view的frame，添加到scrollview
+     
+     创建topBar并添加
+     */
+    
+    if (!viewsArray || viewsArray.count == 0) {
+        return;
     }
-    return _mainView;
+    
+    NSUInteger viewsCount = viewsArray.count;
+    self.contentSize = CGSizeMake(viewsCount*ScreenWidth, ScreenHeight);
+    
+    NSMutableArray *itemsTitleArray = [NSMutableArray array];
+    for (NSUInteger i = 0; i < viewsCount; i++) {
+        UIView *subView = viewsArray[i];
+        subView.frame = CGRectMake(i*ScreenWidth, 0, ScreenWidth, ScreenHeight);
+        [self addSubview:subView];
+        
+        [itemsTitleArray addObject:[NSString stringWithFormat:@"item[%lu]",(unsigned long)i]];
+    }
+    
+    self.topBarView.themeImage = [UIImage imageNamed:@"Unknown"];
+    self.topBarView.itemsArray = itemsTitleArray;
+    [self addSubview:self.topBarView];
+    
+    self.selectedTopBarItemIndex = 0;
+    [self.topBarView selectedButtonIndex:self.selectedTopBarItemIndex];
 }
 
+#pragma mark - life methods
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [self prepareOriganProps];
+        [self prepareOriganProperty];
     }
     return self;
 }
@@ -48,29 +82,31 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self prepareOriganProps];
+        [self prepareOriganProperty];
     }
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame WithBackView:(UIView *)backView AndMainView:(UIView *)mainView {
-    
-    _mainView = mainView;
-    _backView = backView;
-    
-    return [self initWithFrame:frame];
-}
-
-- (void)prepareOriganProps {
-    self.contentSize = CGSizeMake(2.0*ScreenWidth, ScreenHeight);
+- (void)prepareOriganProperty
+{
+    self.delegate = self;
     self.bounces = NO;
     self.pagingEnabled = YES;
-    self.showsHorizontalScrollIndicator = NO;
-    
-    [self addSubview:self.backView];
-    [self addSubview:self.mainView];
-    
-    self.delegate = self;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat contentOffsetX = scrollView.contentOffset.x;
+    
+    CGSize topViewSize = self.topBarView.frame.size;
+    CGPoint topViewPoint = self.topBarView.frame.origin;
+    self.topBarView.frame = CGRectMake(contentOffsetX, topViewPoint.y, topViewSize.width, topViewSize.height);
+    
+    NSUInteger buttonIndex = contentOffsetX/ScreenWidth;
+    if (buttonIndex != self.selectedTopBarItemIndex) {
+        [self.topBarView selectedButtonIndex:buttonIndex];
+    }
+    self.selectedTopBarItemIndex = buttonIndex;
+}
 @end

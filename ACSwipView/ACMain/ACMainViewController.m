@@ -7,10 +7,10 @@
 //
 
 #import "ACMainViewController.h"
-#import "ACMainScrollView.h"
-#import "ACMainView.h"
-#import "ACBackTableView.h"
 #import "GoldHeader.h"
+
+#import "ACMainScrollView.h"
+#import "ACTools.h"
 
 @interface ACMainViewController ()
 
@@ -21,13 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ACMainView *mainView = [[ACMainView alloc] initWithFrame:CGRectMake(ScreenWidth, 0, ScreenWidth, ScreenHeight)];
-    ACBackTableView *backTableView = [[ACBackTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+
+    ACMainScrollView *scrollView = [[ACMainScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     
-    ACMainScrollView *mainScrollView = [[ACMainScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) WithBackView:backTableView AndMainView:mainView];
+    NSMutableArray *viewsArray = [NSMutableArray array];
     
-    [self.view addSubview:mainScrollView];
+    for (NSUInteger i = 0; i < 5; i++) {
+        UIView *subView = [[UIView alloc] initWithFrame:scrollView.bounds];
+        subView.backgroundColor = [ACTools randomThemeColor];
+        
+        [viewsArray addObject:subView];
+    }
     
+    scrollView.viewsArray = viewsArray;
+    [self.view addSubview:scrollView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */; };
+		7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB221E481FC300728D85 /* ACTopBarView.m */; };
+		7F53EB271E4832D200728D85 /* ACTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB261E4832D200728D85 /* ACTools.m */; };
+		7F53EB2C1E485B0200728D85 /* ACDemoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */; };
 		7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FEFD1E45C4F4002AEE10 /* main.m */; };
 		7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF001E45C4F4002AEE10 /* AppDelegate.m */; };
 		7FB1FF091E45C4F4002AEE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1FF081E45C4F4002AEE10 /* Assets.xcassets */; };
 		7FB1FF0C1E45C4F4002AEE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1FF0A1E45C4F4002AEE10 /* LaunchScreen.storyboard */; };
 		7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */; };
-		7FB1FF191E45CD66002AEE10 /* ACMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF181E45CD66002AEE10 /* ACMainScrollView.m */; };
-		7FB1FF1D1E45D4DB002AEE10 /* ACBackTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF1C1E45D4DB002AEE10 /* ACBackTableView.m */; };
-		7FB1FF201E45D81A002AEE10 /* ACMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF1F1E45D81A002AEE10 /* ACMainView.m */; };
-		7FB1FF231E45DFF8002AEE10 /* ACCommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF221E45DFF8002AEE10 /* ACCommonHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainScrollView.h; sourceTree = "<group>"; };
+		7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainScrollView.m; sourceTree = "<group>"; };
+		7F53EB211E481FC300728D85 /* ACTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTopBarView.h; sourceTree = "<group>"; };
+		7F53EB221E481FC300728D85 /* ACTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTopBarView.m; sourceTree = "<group>"; };
+		7F53EB251E4832D200728D85 /* ACTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTools.h; sourceTree = "<group>"; };
+		7F53EB261E4832D200728D85 /* ACTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTools.m; sourceTree = "<group>"; };
+		7F53EB2A1E485B0200728D85 /* ACDemoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDemoTableView.h; sourceTree = "<group>"; };
+		7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDemoTableView.m; sourceTree = "<group>"; };
 		7FB1FEF91E45C4F4002AEE10 /* ACSwipView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACSwipView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB1FEFD1E45C4F4002AEE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB1FEFF1E45C4F4002AEE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,15 +36,7 @@
 		7FB1FF0D1E45C4F4002AEE10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainViewController.h; sourceTree = "<group>"; };
 		7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
-		7FB1FF171E45CD66002AEE10 /* ACMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainScrollView.h; sourceTree = "<group>"; };
-		7FB1FF181E45CD66002AEE10 /* ACMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainScrollView.m; sourceTree = "<group>"; };
 		7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoldHeader.h; sourceTree = "<group>"; };
-		7FB1FF1B1E45D4DB002AEE10 /* ACBackTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACBackTableView.h; sourceTree = "<group>"; };
-		7FB1FF1C1E45D4DB002AEE10 /* ACBackTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACBackTableView.m; sourceTree = "<group>"; };
-		7FB1FF1E1E45D81A002AEE10 /* ACMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainView.h; sourceTree = "<group>"; };
-		7FB1FF1F1E45D81A002AEE10 /* ACMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainView.m; sourceTree = "<group>"; };
-		7FB1FF211E45DFF8002AEE10 /* ACCommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommonHeaderView.h; sourceTree = "<group>"; };
-		7FB1FF221E45DFF8002AEE10 /* ACCommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCommonHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,15 +93,15 @@
 			children = (
 				7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */,
 				7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */,
-				7FB1FF171E45CD66002AEE10 /* ACMainScrollView.h */,
-				7FB1FF181E45CD66002AEE10 /* ACMainScrollView.m */,
-				7FB1FF1B1E45D4DB002AEE10 /* ACBackTableView.h */,
-				7FB1FF1C1E45D4DB002AEE10 /* ACBackTableView.m */,
-				7FB1FF1E1E45D81A002AEE10 /* ACMainView.h */,
-				7FB1FF1F1E45D81A002AEE10 /* ACMainView.m */,
-				7FB1FF211E45DFF8002AEE10 /* ACCommonHeaderView.h */,
-				7FB1FF221E45DFF8002AEE10 /* ACCommonHeaderView.m */,
+				7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */,
+				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
+				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
+				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
+				7F53EB2A1E485B0200728D85 /* ACDemoTableView.h */,
+				7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */,
 				7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */,
+				7F53EB251E4832D200728D85 /* ACTools.h */,
+				7F53EB261E4832D200728D85 /* ACTools.m */,
 			);
 			path = ACMain;
 			sourceTree = "<group>";
@@ -176,13 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB1FF191E45CD66002AEE10 /* ACMainScrollView.m in Sources */,
-				7FB1FF201E45D81A002AEE10 /* ACMainView.m in Sources */,
-				7FB1FF1D1E45D4DB002AEE10 /* ACBackTableView.m in Sources */,
+				7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */,
+				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
+				7F53EB2C1E485B0200728D85 /* ACDemoTableView.m in Sources */,
 				7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */,
-				7FB1FF231E45DFF8002AEE10 /* ACCommonHeaderView.m in Sources */,
+				7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +331,7 @@
 				7FB1FF121E45C4F4002AEE10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
