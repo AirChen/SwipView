@@ -6,14 +6,16 @@
 //  Copyright © 2017年 AirChen. All rights reserved.
 //
 
-#import "ACDemoTableView.h"
+#import "ACCommonTableView.h"
 #import "GoldHeader.h"
 
-@interface ACDemoTableView()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface ACCommonTableView()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+
+@property (nonatomic, assign)CGFloat beginOffsetY;
 
 @end
 
-@implementation ACDemoTableView
+@implementation ACCommonTableView
 
 #pragma mark - life methods
 - (instancetype)init
@@ -40,6 +42,7 @@
     self.dataSource = self;
 
     self.contentInset = UIEdgeInsetsMake(TopBarHeight, 0, 0, 0);
+    self.beginOffsetY = -TopBarHeight;
 }
 
 #pragma mark - notification
@@ -55,7 +58,8 @@
     NSNumber *yNumber = noti.userInfo[ScrollHeightKey];
     CGFloat offsetY = [yNumber floatValue];
     
-    self.contentOffset = CGPointMake(0, offsetY);
+    if (offsetY <= -ItemsBarHeight)
+        self.contentOffset = CGPointMake(0, offsetY);
 }
 
 - (void)dealloc
@@ -66,6 +70,11 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    return [self ac_tableView:tableView numberOfRowsInSection:section];
+}
+
+- (NSInteger)ac_tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if (!_cellsArray) {
         _cellsArray = [NSArray array];
     }
@@ -74,6 +83,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self ac_tableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCell *)ac_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -92,8 +106,14 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSNumber *yNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
+//    NSLog(@"<--------%@",yNumber);
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:yNumber,ScrollHeightKey, nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:ScrollHeightChange object:self userInfo:dic];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.beginOffsetY = self.contentOffset.y;
 }
 @end

@@ -20,8 +20,9 @@
 #define TopBarHeight 200.0
 
 /* ACTopBarView */
+#define IdealItemsCount 4
 #define ItemsBarHeight 40.0
-#define ItemWidth ScreenWidth/4.0
+#define ItemWidth ScreenWidth/IdealItemsCount*1.0
 #define ItemHeight ItemsBarHeight
 
 /* ACTools */

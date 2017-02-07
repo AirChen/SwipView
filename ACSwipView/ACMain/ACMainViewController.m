@@ -11,7 +11,7 @@
 
 #import "ACMainScrollView.h"
 #import "ACTools.h"
-#import "ACDemoTableView.h"
+#import "ACCommonTableView.h"
 
 @interface ACMainViewController ()
 
@@ -32,8 +32,8 @@
         [cellDataArray addObject:[NSString stringWithFormat:@"cellData[%lu]",i]];
     }
     
-    for (NSUInteger i = 0; i < 5; i++) {
-        ACDemoTableView *subView = [[ACDemoTableView alloc] initWithFrame:scrollView.bounds];
+    for (NSUInteger i = 0; i < 4; i++) {
+        ACCommonTableView *subView = [[ACCommonTableView alloc] initWithFrame:scrollView.bounds];
         subView.cellsArray = [cellDataArray mutableCopy];
         subView.backgroundColor = [ACTools randomThemeColor];
         

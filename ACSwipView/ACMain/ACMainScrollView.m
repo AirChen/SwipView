@@ -13,7 +13,6 @@
 @interface ACMainScrollView()<UIScrollViewDelegate>
 
 @property(nonatomic, strong)ACTopBarView *topBarView;
-@property (nonatomic, assign)NSInteger selectedTopBarItemIndex;
 
 @end
 
@@ -64,8 +63,7 @@
     self.topBarView.itemsArray = itemsTitleArray;
     [self addSubview:self.topBarView];
     
-    self.selectedTopBarItemIndex = 0;
-    [self.topBarView selectedButtonIndex:self.selectedTopBarItemIndex];
+    [self.topBarView selectedButtonIndex:0];
 }
 
 #pragma mark - life methods
@@ -92,6 +90,7 @@
     self.delegate = self;
     self.bounces = NO;
     self.pagingEnabled = YES;
+    self.showsHorizontalScrollIndicator = NO;
 }
 
 #pragma mark - notification
@@ -111,13 +110,13 @@
 {
     NSNumber *yNumber = noti.userInfo[ScrollHeightKey];
     CGFloat offsetY = [yNumber floatValue];
-    
-    NSLog(@"%f",offsetY);
-    
-    if (offsetY < -ItemsBarHeight) {
+        
+    if (offsetY <= -ItemsBarHeight) {
         CGSize topViewSize = self.topBarView.frame.size;
         CGPoint topViewPoint = self.topBarView.frame.origin;
         self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight+offsetY), topViewSize.width, topViewSize.height);
+    }else{
+        NSLog(@"----->%f",offsetY);
     }
 }
 
@@ -136,10 +135,7 @@
     CGFloat contentOffsetX = scrollView.contentOffset.x;
 
     NSUInteger buttonIndex = contentOffsetX/ScreenWidth;
-    if (buttonIndex != self.selectedTopBarItemIndex) {
-        [self.topBarView selectedButtonIndex:buttonIndex];
-    }
-    self.selectedTopBarItemIndex = buttonIndex;
+    [self.topBarView selectedButtonIndex:buttonIndex];
 }
 
 @end

@@ -10,7 +10,7 @@
 		7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */; };
 		7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB221E481FC300728D85 /* ACTopBarView.m */; };
 		7F53EB271E4832D200728D85 /* ACTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB261E4832D200728D85 /* ACTools.m */; };
-		7F53EB2C1E485B0200728D85 /* ACDemoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */; };
+		7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */; };
 		7F53EB311E48846900728D85 /* UIScrollView+CalculateScrollHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */; };
 		7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FEFD1E45C4F4002AEE10 /* main.m */; };
 		7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF001E45C4F4002AEE10 /* AppDelegate.m */; };
@@ -26,8 +26,8 @@
 		7F53EB221E481FC300728D85 /* ACTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTopBarView.m; sourceTree = "<group>"; };
 		7F53EB251E4832D200728D85 /* ACTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTools.h; sourceTree = "<group>"; };
 		7F53EB261E4832D200728D85 /* ACTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTools.m; sourceTree = "<group>"; };
-		7F53EB2A1E485B0200728D85 /* ACDemoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDemoTableView.h; sourceTree = "<group>"; };
-		7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDemoTableView.m; sourceTree = "<group>"; };
+		7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommonTableView.h; sourceTree = "<group>"; };
+		7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCommonTableView.m; sourceTree = "<group>"; };
 		7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CalculateScrollHeight.h"; sourceTree = "<group>"; };
 		7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CalculateScrollHeight.m"; sourceTree = "<group>"; };
 		7FB1FEF91E45C4F4002AEE10 /* ACSwipView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACSwipView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +100,8 @@
 				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
 				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
 				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
-				7F53EB2A1E485B0200728D85 /* ACDemoTableView.h */,
-				7F53EB2B1E485B0200728D85 /* ACDemoTableView.m */,
+				7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */,
+				7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */,
 				7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */,
 				7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */,
 				7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */,
@@ -186,7 +186,7 @@
 				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
-				7F53EB2C1E485B0200728D85 /* ACDemoTableView.m in Sources */,
+				7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */,
 				7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */,
 				7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */,
 			);

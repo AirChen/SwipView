@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACDemoTableView : UITableView
+@interface ACCommonTableView : UITableView
 
 @property (nonatomic, copy)NSArray *cellsArray;
 

@@ -33,6 +33,9 @@
 {
     if (!_itemsScrollView) {
         _itemsScrollView = [[UIScrollView alloc] init];
+        
+        _itemsScrollView.showsHorizontalScrollIndicator = NO;
+        _itemsScrollView.bounces = NO;
     }
     return _itemsScrollView;
 }
@@ -120,6 +123,29 @@
             [btn setBackgroundColor:[UIColor clearColor]];
         }else
             [btn setBackgroundColor:[UIColor redColor]];
+    }
+    
+    /*
+     控制scrollbar的位置
+     1.计算出理想的位置
+     1.1 当前的index，总共的count
+     1.2 index在count中的位置
+     2.滑动
+     */
+    
+    NSUInteger itemsCount = self.buttonsArray.count;
+    if (itemsCount <= IdealItemsCount) {
+        return;
+    }
+    
+    NSInteger compareCount = itemsCount - IdealItemsCount;
+    NSInteger adviceIndex = index - 2;
+    
+    if (adviceIndex <= compareCount) {
+        //可以调整
+        [UIView animateWithDuration:0.25 animations:^{
+            self.itemsScrollView.contentOffset = CGPointMake((adviceIndex*ItemWidth >= 0.0? adviceIndex*ItemWidth:0.0), 0);
+        }];
     }
 }
 
