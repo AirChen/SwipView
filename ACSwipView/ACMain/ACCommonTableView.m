@@ -51,6 +51,7 @@
     [super layoutSubviews];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollOffsetYChange:) name:ScrollHeightChange object:nil];
+    
 }
 
 - (void)scrollOffsetYChange:(NSNotification *)noti

@@ -110,13 +110,14 @@
 {
     NSNumber *yNumber = noti.userInfo[ScrollHeightKey];
     CGFloat offsetY = [yNumber floatValue];
-        
+
+    CGSize topViewSize = self.topBarView.frame.size;
+    CGPoint topViewPoint = self.topBarView.frame.origin;
+    
     if (offsetY <= -ItemsBarHeight) {
-        CGSize topViewSize = self.topBarView.frame.size;
-        CGPoint topViewPoint = self.topBarView.frame.origin;
         self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight+offsetY), topViewSize.width, topViewSize.height);
     }else{
-        NSLog(@"----->%f",offsetY);
+        self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight-ItemsBarHeight), topViewSize.width, topViewSize.height);
     }
 }
 
