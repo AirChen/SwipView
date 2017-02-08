@@ -12,6 +12,9 @@
 		7F53EB271E4832D200728D85 /* ACTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB261E4832D200728D85 /* ACTools.m */; };
 		7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */; };
 		7F53EB311E48846900728D85 /* UIScrollView+CalculateScrollHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */; };
+		7F9F931C1E4AF528007D2EF3 /* ACCommonCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */; };
+		7F9F931F1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */; };
+		7F9F93231E4B133A007D2EF3 /* ACZoomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */; };
 		7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FEFD1E45C4F4002AEE10 /* main.m */; };
 		7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF001E45C4F4002AEE10 /* AppDelegate.m */; };
 		7FB1FF091E45C4F4002AEE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1FF081E45C4F4002AEE10 /* Assets.xcassets */; };
@@ -30,6 +33,12 @@
 		7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCommonTableView.m; sourceTree = "<group>"; };
 		7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CalculateScrollHeight.h"; sourceTree = "<group>"; };
 		7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CalculateScrollHeight.m"; sourceTree = "<group>"; };
+		7F9F931A1E4AF528007D2EF3 /* ACCommonCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommonCollectionView.h; sourceTree = "<group>"; };
+		7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCommonCollectionView.m; sourceTree = "<group>"; };
+		7F9F931D1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCollectionViewFlowRegularLayout.h; sourceTree = "<group>"; };
+		7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCollectionViewFlowRegularLayout.m; sourceTree = "<group>"; };
+		7F9F93211E4B133A007D2EF3 /* ACZoomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACZoomImageView.h; sourceTree = "<group>"; };
+		7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACZoomImageView.m; sourceTree = "<group>"; };
 		7FB1FEF91E45C4F4002AEE10 /* ACSwipView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACSwipView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB1FEFD1E45C4F4002AEE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB1FEFF1E45C4F4002AEE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,12 +105,18 @@
 			children = (
 				7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */,
 				7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */,
+				7F9F93211E4B133A007D2EF3 /* ACZoomImageView.h */,
+				7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */,
 				7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */,
 				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
 				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
 				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
 				7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */,
 				7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */,
+				7F9F931A1E4AF528007D2EF3 /* ACCommonCollectionView.h */,
+				7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */,
+				7F9F931D1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.h */,
+				7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */,
 				7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */,
 				7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */,
 				7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */,
@@ -182,12 +197,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F53EB311E48846900728D85 /* UIScrollView+CalculateScrollHeight.m in Sources */,
+				7F9F931F1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m in Sources */,
+				7F9F931C1E4AF528007D2EF3 /* ACCommonCollectionView.m in Sources */,
 				7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */,
 				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
 				7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */,
 				7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */,
+				7F9F93231E4B133A007D2EF3 /* ACZoomImageView.m in Sources */,
 				7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

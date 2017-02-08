@@ -107,7 +107,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSNumber *yNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
-//    NSLog(@"<--------%@",yNumber);
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:yNumber,ScrollHeightKey, nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:ScrollHeightChange object:self userInfo:dic];

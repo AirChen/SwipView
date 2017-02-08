@@ -56,3 +56,7 @@ static inline void ReplaceMethod(Class _class, SEL _originSelector, SEL _newSele
         method_exchangeImplementations(oriMethod, newMethod);
     }
 }
+
+static inline CGRect CGRectMakeWithSize(CGSize size) {
+    return CGRectMake(0, 0, size.width, size.height);
+}

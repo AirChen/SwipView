@@ -10,6 +10,9 @@
 
 @interface ACCommonTableView : UITableView
 
+/**
+ 字符串数组
+ */
 @property (nonatomic, copy)NSArray *cellsArray;
 
 @end
