@@ -46,6 +46,10 @@
 #define Weakify(o) __weak typeof(o) o##Weak = o;
 #define Strongify(o) __strong typeof(o) o = o##Weak;
 
+// 比例
+#define kWidthScale(value)  [UIScreen mainScreen].bounds.size.width/375*value
+#define kHeightScale(value) [UIScreen mainScreen].bounds.size.height/667*value
+
 static inline void ReplaceMethod(Class _class, SEL _originSelector, SEL _newSelector) {
     Method oriMethod = class_getInstanceMethod(_class, _originSelector);
     Method newMethod = class_getInstanceMethod(_class, _newSelector);

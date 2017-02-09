@@ -18,6 +18,10 @@
 
 #import "ACCollectionViewFlowRegularLayout.h"
 
+#import "ACListView.h"
+#import "ACListItemView.h"
+#import "ACListTableView.h"
+
 @interface ACMainViewController ()
 
 @end
@@ -27,6 +31,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSMutableArray *itemViewsArray = [NSMutableArray array];
+    
+    for (NSUInteger i = 0; i < 30; i++) {
+        ACListItemView *itemView = [[ACListItemView alloc] init];
+        itemView.backgroundColor = [ACTools randomThemeColor];
+        
+        [itemViewsArray addObject:itemView];
+    }
+    
+    NSMutableArray *cellDataArray = [NSMutableArray array];
+    for (NSUInteger i = 0; i < 20; i++) {
+        [cellDataArray addObject:[NSString stringWithFormat:@"cellData[%lu]",i]];
+    }
+    ACListTableView *listTableView = [[ACListTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
+    listTableView.itemsArray = cellDataArray;
+    [itemViewsArray addObject:listTableView];
+    
+    for (NSUInteger i = 0; i < 30; i++) {
+        ACListItemView *itemView = [[ACListItemView alloc] init];
+        itemView.backgroundColor = [ACTools randomThemeColor];
+        
+        [itemViewsArray addObject:itemView];
+    }
+    
+    ACListView *listView = [[ACListView alloc] initWithFrame:self.view.bounds];
+    listView.itemViewsArray = itemViewsArray;
+    
+    [self.view addSubview:listView];
+}
+
+- (void)setupZoomView
+{
     ACZoomImageView *zoomImageView = [[ACZoomImageView alloc] initWithFrame:self.view.bounds];
     zoomImageView.image = [UIImage imageNamed:@"Unknown"];
     

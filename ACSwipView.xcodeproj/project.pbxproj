@@ -15,14 +15,19 @@
 		7F9F931C1E4AF528007D2EF3 /* ACCommonCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */; };
 		7F9F931F1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */; };
 		7F9F93231E4B133A007D2EF3 /* ACZoomImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */; };
+		7F9F933F1E4C5500007D2EF3 /* ACListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F933E1E4C5500007D2EF3 /* ACListView.m */; };
+		7F9F93421E4C5A4A007D2EF3 /* ACListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F93411E4C5A4A007D2EF3 /* ACListItemView.m */; };
+		7F9F93451E4C6BBF007D2EF3 /* ACListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F93441E4C6BBF007D2EF3 /* ACListTableView.m */; };
 		7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FEFD1E45C4F4002AEE10 /* main.m */; };
 		7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF001E45C4F4002AEE10 /* AppDelegate.m */; };
 		7FB1FF091E45C4F4002AEE10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1FF081E45C4F4002AEE10 /* Assets.xcassets */; };
 		7FB1FF0C1E45C4F4002AEE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB1FF0A1E45C4F4002AEE10 /* LaunchScreen.storyboard */; };
 		7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */; };
+		86E17A7A8091AD39D664B76C /* libPods-ACSwipView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7B61D65D7A9C0B7A923426 /* libPods-ACSwipView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C7B61D65D7A9C0B7A923426 /* libPods-ACSwipView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACSwipView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainScrollView.h; sourceTree = "<group>"; };
 		7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainScrollView.m; sourceTree = "<group>"; };
 		7F53EB211E481FC300728D85 /* ACTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTopBarView.h; sourceTree = "<group>"; };
@@ -39,6 +44,12 @@
 		7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCollectionViewFlowRegularLayout.m; sourceTree = "<group>"; };
 		7F9F93211E4B133A007D2EF3 /* ACZoomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACZoomImageView.h; sourceTree = "<group>"; };
 		7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACZoomImageView.m; sourceTree = "<group>"; };
+		7F9F933D1E4C5500007D2EF3 /* ACListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACListView.h; sourceTree = "<group>"; };
+		7F9F933E1E4C5500007D2EF3 /* ACListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACListView.m; sourceTree = "<group>"; };
+		7F9F93401E4C5A4A007D2EF3 /* ACListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACListItemView.h; sourceTree = "<group>"; };
+		7F9F93411E4C5A4A007D2EF3 /* ACListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACListItemView.m; sourceTree = "<group>"; };
+		7F9F93431E4C6BBF007D2EF3 /* ACListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACListTableView.h; sourceTree = "<group>"; };
+		7F9F93441E4C6BBF007D2EF3 /* ACListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACListTableView.m; sourceTree = "<group>"; };
 		7FB1FEF91E45C4F4002AEE10 /* ACSwipView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACSwipView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB1FEFD1E45C4F4002AEE10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FB1FEFF1E45C4F4002AEE10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +60,8 @@
 		7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainViewController.h; sourceTree = "<group>"; };
 		7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
 		7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoldHeader.h; sourceTree = "<group>"; };
+		D5C7C7218F572370B398E6A4 /* Pods-ACSwipView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACSwipView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACSwipView/Pods-ACSwipView.release.xcconfig"; sourceTree = "<group>"; };
+		EA1A409CCA86D358369519A1 /* Pods-ACSwipView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACSwipView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACSwipView/Pods-ACSwipView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +69,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E17A7A8091AD39D664B76C /* libPods-ACSwipView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49F1D9A0B12077837C59D900 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA1A409CCA86D358369519A1 /* Pods-ACSwipView.debug.xcconfig */,
+				D5C7C7218F572370B398E6A4 /* Pods-ACSwipView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F9F93461E4C74EA007D2EF3 /* listView */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F933D1E4C5500007D2EF3 /* ACListView.h */,
+				7F9F933E1E4C5500007D2EF3 /* ACListView.m */,
+				7F9F93401E4C5A4A007D2EF3 /* ACListItemView.h */,
+				7F9F93411E4C5A4A007D2EF3 /* ACListItemView.m */,
+				7F9F93431E4C6BBF007D2EF3 /* ACListTableView.h */,
+				7F9F93441E4C6BBF007D2EF3 /* ACListTableView.m */,
+			);
+			name = listView;
+			sourceTree = "<group>";
+		};
+		7F9F93471E4C74F8007D2EF3 /* swipView */ = {
+			isa = PBXGroup;
+			children = (
+				7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */,
+				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
+				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
+				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
+				7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */,
+				7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */,
+				7F9F931A1E4AF528007D2EF3 /* ACCommonCollectionView.h */,
+				7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */,
+				7F9F931D1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.h */,
+				7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */,
+				7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */,
+				7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */,
+			);
+			name = swipView;
+			sourceTree = "<group>";
+		};
+		7F9F93481E4C7504007D2EF3 /* zoomView */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F93211E4B133A007D2EF3 /* ACZoomImageView.h */,
+				7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */,
+			);
+			name = zoomView;
+			sourceTree = "<group>";
+		};
 		7FB1FEF01E45C4F4002AEE10 = {
 			isa = PBXGroup;
 			children = (
 				7FB1FEFB1E45C4F4002AEE10 /* ACSwipView */,
 				7FB1FEFA1E45C4F4002AEE10 /* Products */,
+				49F1D9A0B12077837C59D900 /* Pods */,
+				AFAA21650EAC00B1619172A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,25 +171,22 @@
 			children = (
 				7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */,
 				7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */,
-				7F9F93211E4B133A007D2EF3 /* ACZoomImageView.h */,
-				7F9F93221E4B133A007D2EF3 /* ACZoomImageView.m */,
-				7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */,
-				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
-				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
-				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
-				7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */,
-				7F53EB2B1E485B0200728D85 /* ACCommonTableView.m */,
-				7F9F931A1E4AF528007D2EF3 /* ACCommonCollectionView.h */,
-				7F9F931B1E4AF528007D2EF3 /* ACCommonCollectionView.m */,
-				7F9F931D1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.h */,
-				7F9F931E1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m */,
-				7F53EB2F1E48846900728D85 /* UIScrollView+CalculateScrollHeight.h */,
-				7F53EB301E48846900728D85 /* UIScrollView+CalculateScrollHeight.m */,
+				7F9F93481E4C7504007D2EF3 /* zoomView */,
+				7F9F93461E4C74EA007D2EF3 /* listView */,
+				7F9F93471E4C74F8007D2EF3 /* swipView */,
 				7FB1FF1A1E45CEAC002AEE10 /* GoldHeader.h */,
 				7F53EB251E4832D200728D85 /* ACTools.h */,
 				7F53EB261E4832D200728D85 /* ACTools.m */,
 			);
 			path = ACMain;
+			sourceTree = "<group>";
+		};
+		AFAA21650EAC00B1619172A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C7B61D65D7A9C0B7A923426 /* libPods-ACSwipView.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB1FF101E45C4F4002AEE10 /* Build configuration list for PBXNativeTarget "ACSwipView" */;
 			buildPhases = (
+				307DAE434B8C0A0EA167C3C5 /* [CP] Check Pods Manifest.lock */,
 				7FB1FEF51E45C4F4002AEE10 /* Sources */,
 				7FB1FEF61E45C4F4002AEE10 /* Frameworks */,
 				7FB1FEF71E45C4F4002AEE10 /* Resources */,
+				4C084AD4F07411E7DDB56359 /* [CP] Embed Pods Frameworks */,
+				E1ED70D13828F72289F47B43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +257,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		307DAE434B8C0A0EA167C3C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C084AD4F07411E7DDB56359 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACSwipView/Pods-ACSwipView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1ED70D13828F72289F47B43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACSwipView/Pods-ACSwipView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FB1FEF51E45C4F4002AEE10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,13 +312,16 @@
 			files = (
 				7F53EB311E48846900728D85 /* UIScrollView+CalculateScrollHeight.m in Sources */,
 				7F9F931F1E4AFABE007D2EF3 /* ACCollectionViewFlowRegularLayout.m in Sources */,
+				7F9F933F1E4C5500007D2EF3 /* ACListView.m in Sources */,
 				7F9F931C1E4AF528007D2EF3 /* ACCommonCollectionView.m in Sources */,
 				7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */,
 				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
 				7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */,
+				7F9F93421E4C5A4A007D2EF3 /* ACListItemView.m in Sources */,
 				7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */,
+				7F9F93451E4C6BBF007D2EF3 /* ACListTableView.m in Sources */,
 				7F9F93231E4B133A007D2EF3 /* ACZoomImageView.m in Sources */,
 				7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */,
 			);
@@ -316,6 +433,7 @@
 		};
 		7FB1FF111E45C4F4002AEE10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1A409CCA86D358369519A1 /* Pods-ACSwipView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ACSwipView/Info.plist;
@@ -327,6 +445,7 @@
 		};
 		7FB1FF121E45C4F4002AEE10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5C7C7218F572370B398E6A4 /* Pods-ACSwipView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ACSwipView/Info.plist;
