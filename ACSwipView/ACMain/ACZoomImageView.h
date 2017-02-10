@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong)UIImage *image;
 
+@property (nonatomic, assign)CGFloat maximumZoomScale;
+
 @end

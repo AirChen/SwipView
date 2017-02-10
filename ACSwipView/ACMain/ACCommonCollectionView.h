@@ -16,3 +16,12 @@
 @property (nonatomic, copy)NSArray *itemsArray;
 
 @end
+
+@interface ACCommonCollectionView(ACCommonCollectionViewSubHooks)
+
+- (void)ac_prepareOriganProperty;
+
+- (NSInteger)ac_collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
+- (UICollectionViewCell *)ac_collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+@end

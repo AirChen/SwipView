@@ -40,9 +40,11 @@
 {
     self.delegate = self;
     self.dataSource = self;
-
+    
     self.contentInset = UIEdgeInsetsMake(TopBarHeight, 0, 0, 0);
     self.beginOffsetY = -TopBarHeight;
+    
+    [self ac_prepareOriganProperty];
 }
 
 #pragma mark - notification
@@ -74,6 +76,33 @@
     return [self ac_tableView:tableView numberOfRowsInSection:section];
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self ac_tableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSNumber *yNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:yNumber,ScrollHeightKey, nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:ScrollHeightChange object:self userInfo:dic];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.beginOffsetY = self.contentOffset.y;
+}
+@end
+
+@implementation ACCommonTableView(ACCommonTableViewSubClassHooks)
+
+- (void)ac_prepareOriganProperty
+{
+    
+}
+
 - (NSInteger)ac_tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (!_cellsArray) {
@@ -81,11 +110,6 @@
     }
     
     return self.cellsArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [self ac_tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)ac_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,17 +127,4 @@
     return cell;
 }
 
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSNumber *yNumber = [NSNumber numberWithFloat:scrollView.contentOffset.y];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:yNumber,ScrollHeightKey, nil];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:ScrollHeightChange object:self userInfo:dic];
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    self.beginOffsetY = self.contentOffset.y;
-}
 @end

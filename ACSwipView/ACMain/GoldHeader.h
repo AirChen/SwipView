@@ -50,6 +50,11 @@
 #define kWidthScale(value)  [UIScreen mainScreen].bounds.size.width/375*value
 #define kHeightScale(value) [UIScreen mainScreen].bounds.size.height/667*value
 
+/// 判断一个size是否为空（宽或高为0）
+static inline BOOL CGSizeIsEmpty(CGSize size) {
+    return size.width <= 0 || size.height <= 0;
+}
+
 static inline void ReplaceMethod(Class _class, SEL _originSelector, SEL _newSelector) {
     Method oriMethod = class_getInstanceMethod(_class, _originSelector);
     Method newMethod = class_getInstanceMethod(_class, _newSelector);

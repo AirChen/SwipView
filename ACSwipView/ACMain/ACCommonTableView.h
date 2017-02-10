@@ -16,3 +16,11 @@
 @property (nonatomic, copy)NSArray *cellsArray;
 
 @end
+
+@interface ACCommonTableView(ACCommonTableViewSubClassHooks)
+
+- (void)ac_prepareOriganProperty;
+- (NSInteger)ac_tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)ac_tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@end

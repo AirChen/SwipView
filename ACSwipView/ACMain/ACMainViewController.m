@@ -31,6 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupZoomView];
+}
+
+- (void)setupListView
+{
     NSMutableArray *itemViewsArray = [NSMutableArray array];
     
     for (NSUInteger i = 0; i < 30; i++) {
@@ -65,6 +70,8 @@
 {
     ACZoomImageView *zoomImageView = [[ACZoomImageView alloc] initWithFrame:self.view.bounds];
     zoomImageView.image = [UIImage imageNamed:@"Unknown"];
+    zoomImageView.maximumZoomScale = 2.0;
+    zoomImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.view addSubview:zoomImageView];
 }

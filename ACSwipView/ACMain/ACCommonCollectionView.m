@@ -54,6 +54,8 @@
     self.backgroundColor = [UIColor orangeColor];
     
     [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Item"];
+    
+    [self ac_prepareOriganProperty];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -62,30 +64,9 @@
     return [self ac_collectionView:collectionView numberOfItemsInSection:section];
 }
 
-- (NSInteger)ac_collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.itemsArray.count;
-}
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self ac_collectionView:collectionView cellForItemAtIndexPath:indexPath];
-}
-
-- (UICollectionViewCell *)ac_collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"Item";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    cell.contentView.backgroundColor = [ACTools randomThemeColor];
-    
-    NSString *cellTitle = self.itemsArray[indexPath.row];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 40, 20)];
-    label.text = cellTitle;
-    
-    [cell.contentView addSubview:label];
-    
-    return cell;
 }
 
 #pragma mark - notification
@@ -119,6 +100,37 @@
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:yNumber,ScrollHeightKey, nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:ScrollHeightChange object:self userInfo:dic];
+}
+
+
+@end
+
+@implementation ACCommonCollectionView(ACCommonCollectionViewSubHooks)
+
+- (void)ac_prepareOriganProperty
+{
+    
+}
+
+- (NSInteger)ac_collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.itemsArray.count;
+}
+
+- (UICollectionViewCell *)ac_collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Item";
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    cell.contentView.backgroundColor = [ACTools randomThemeColor];
+    
+    NSString *cellTitle = self.itemsArray[indexPath.row];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 40, 20)];
+    label.text = cellTitle;
+    
+    [cell.contentView addSubview:label];
+    
+    return cell;
 }
 
 
