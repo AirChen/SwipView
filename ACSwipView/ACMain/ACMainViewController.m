@@ -22,6 +22,8 @@
 #import "ACListItemView.h"
 #import "ACListTableView.h"
 
+#import "ACAdsLoopView.h"
+
 @interface ACMainViewController ()
 
 @end
@@ -31,7 +33,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupZoomView];
+    [self setupLoopView];
+}
+
+- (void)setupLoopView
+{
+    ACAdsLoopView *view = [[ACAdsLoopView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    
+    NSMutableArray *itemArray = [NSMutableArray array];
+    for (NSUInteger i = 0; i < 12; i++) {
+        
+        NSDictionary *dic = [NSDictionary dictionaryWithObject:@"Unknown" forKey:@"image_url"];
+        [itemArray addObject:dic];
+    }
+    
+    view.models = itemArray;
+    
+    view.layer.cornerRadius = 30;
+    view.layer.masksToBounds = YES;
+    
+    [self.view addSubview:view];
 }
 
 - (void)setupListView

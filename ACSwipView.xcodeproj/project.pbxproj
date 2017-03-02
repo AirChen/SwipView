@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F518A211E54016E0030DE25 /* ACAdsLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A201E54016E0030DE25 /* ACAdsLoopView.m */; };
+		7F518A241E5402C00030DE25 /* ACBoxPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A231E5402C00030DE25 /* ACBoxPageControl.m */; };
+		7F518A281E5448270030DE25 /* ACMultitudeImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A271E5448270030DE25 /* ACMultitudeImagesView.m */; };
 		7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */; };
 		7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB221E481FC300728D85 /* ACTopBarView.m */; };
 		7F53EB271E4832D200728D85 /* ACTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F53EB261E4832D200728D85 /* ACTools.m */; };
@@ -28,6 +31,12 @@
 
 /* Begin PBXFileReference section */
 		6C7B61D65D7A9C0B7A923426 /* libPods-ACSwipView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACSwipView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F518A1F1E54016E0030DE25 /* ACAdsLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAdsLoopView.h; sourceTree = "<group>"; };
+		7F518A201E54016E0030DE25 /* ACAdsLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAdsLoopView.m; sourceTree = "<group>"; };
+		7F518A221E5402C00030DE25 /* ACBoxPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACBoxPageControl.h; sourceTree = "<group>"; };
+		7F518A231E5402C00030DE25 /* ACBoxPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACBoxPageControl.m; sourceTree = "<group>"; };
+		7F518A261E5448270030DE25 /* ACMultitudeImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMultitudeImagesView.h; sourceTree = "<group>"; };
+		7F518A271E5448270030DE25 /* ACMultitudeImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMultitudeImagesView.m; sourceTree = "<group>"; };
 		7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMainScrollView.h; sourceTree = "<group>"; };
 		7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainScrollView.m; sourceTree = "<group>"; };
 		7F53EB211E481FC300728D85 /* ACTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTopBarView.h; sourceTree = "<group>"; };
@@ -83,6 +92,17 @@
 				D5C7C7218F572370B398E6A4 /* Pods-ACSwipView.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F518A251E5443D90030DE25 /* loopView */ = {
+			isa = PBXGroup;
+			children = (
+				7F518A1F1E54016E0030DE25 /* ACAdsLoopView.h */,
+				7F518A201E54016E0030DE25 /* ACAdsLoopView.m */,
+				7F518A221E5402C00030DE25 /* ACBoxPageControl.h */,
+				7F518A231E5402C00030DE25 /* ACBoxPageControl.m */,
+			);
+			name = loopView;
 			sourceTree = "<group>";
 		};
 		7F9F93461E4C74EA007D2EF3 /* listView */ = {
@@ -171,6 +191,9 @@
 			children = (
 				7FB1FF141E45CC52002AEE10 /* ACMainViewController.h */,
 				7FB1FF151E45CC52002AEE10 /* ACMainViewController.m */,
+				7F518A261E5448270030DE25 /* ACMultitudeImagesView.h */,
+				7F518A271E5448270030DE25 /* ACMultitudeImagesView.m */,
+				7F518A251E5443D90030DE25 /* loopView */,
 				7F9F93481E4C7504007D2EF3 /* zoomView */,
 				7F9F93461E4C74EA007D2EF3 /* listView */,
 				7F9F93471E4C74F8007D2EF3 /* swipView */,
@@ -315,7 +338,9 @@
 				7F9F933F1E4C5500007D2EF3 /* ACListView.m in Sources */,
 				7F9F931C1E4AF528007D2EF3 /* ACCommonCollectionView.m in Sources */,
 				7F53EB201E481F2400728D85 /* ACMainScrollView.m in Sources */,
+				7F518A211E54016E0030DE25 /* ACAdsLoopView.m in Sources */,
 				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
+				7F518A241E5402C00030DE25 /* ACBoxPageControl.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
 				7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */,
@@ -323,6 +348,7 @@
 				7FB1FEFE1E45C4F4002AEE10 /* main.m in Sources */,
 				7F9F93451E4C6BBF007D2EF3 /* ACListTableView.m in Sources */,
 				7F9F93231E4B133A007D2EF3 /* ACZoomImageView.m in Sources */,
+				7F518A281E5448270030DE25 /* ACMultitudeImagesView.m in Sources */,
 				7F53EB231E481FC300728D85 /* ACTopBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
