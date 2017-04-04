@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupLoopView];
+    [self setupScrollMainView];
 }
 
 - (void)setupLoopView
@@ -53,6 +53,7 @@
     view.layer.masksToBounds = YES;
     
     [self.view addSubview:view];
+
 }
 
 - (void)setupListView
