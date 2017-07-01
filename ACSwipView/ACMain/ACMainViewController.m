@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupListView];
+    [self setupScrollMainView];
 }
 
 - (void)setupLoopView

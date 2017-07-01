@@ -14,9 +14,21 @@ typedef void(^TopBarItmesClicked)(NSUInteger index);
 
 @property (nonatomic, strong)NSMutableArray *itemsArray;
 @property (nonatomic, strong)UIImage *themeImage;
+@property (nonatomic, readwrite, assign) NSInteger idealItemsCount;
+@property (nonatomic, readwrite, assign) CGFloat itemBarHeight;
 
 @property (nonatomic, copy)TopBarItmesClicked itemsClicked;
 
 - (void)selectedButtonIndex:(NSUInteger)index;
+
+@end
+
+@interface ACTopBarView (ACTopBarViewSubClassHooks)
+
+- (void)ac_prepareOriganProperty;
+- (void)ac_layoutSubViews;
+
+//自定义按键
+- (UIButton *)ac_modifyButtonTextInButton:(UIButton *)btn withText:(NSString *)str;
 
 @end

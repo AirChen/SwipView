@@ -18,7 +18,12 @@
 
 @end
 
-@implementation ACTopBarView
+@implementation ACTopBarView{
+    
+    CGFloat itemHeight;
+    CGFloat itemWidth;
+    
+}
 
 #pragma mark - lazyload
 - (UIImageView *)themeImageView
@@ -65,14 +70,23 @@
     
     [self addSubview:self.itemsScrollView];
     [self addSubview:self.themeImageView];
+    
+    self.idealItemsCount = self.idealItemsCount == 0 ? IdealItemsCount : self.idealItemsCount;
+    self.itemBarHeight = self.itemBarHeight * 1 == 0 ? ItemsBarHeight : self.itemBarHeight;
+    itemWidth = ScreenWidth / self.idealItemsCount * 1.0;
+    itemHeight = self.itemBarHeight;
+    
+    [self ac_prepareOriganProperty];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    CGFloat imageViewHeight = self.frame.size.height - ItemsBarHeight;
+    CGFloat imageViewHeight = self.frame.size.height - self.itemBarHeight;
     self.themeImageView.frame = CGRectMake(0, 0, ScreenWidth, imageViewHeight);
-    self.itemsScrollView.frame = CGRectMake(0, imageViewHeight, ScreenWidth, ItemsBarHeight);
+    self.itemsScrollView.frame = CGRectMake(0, imageViewHeight, ScreenWidth, self.itemBarHeight);
+    
+    [self ac_layoutSubViews];
 }
 
 #pragma mark - openSlots
@@ -85,17 +99,19 @@
      */
     
     NSUInteger itemsCount = itemsArray.count;
-    self.itemsScrollView.contentSize = CGSizeMake(itemsCount*ItemWidth, ItemHeight);
+    self.itemsScrollView.contentSize = CGSizeMake(itemsCount*itemWidth, itemHeight);
     
     if (!_buttonsArray) {
         _buttonsArray = [NSMutableArray array];
     }
     for (NSUInteger i = 0; i < itemsCount; i++) {
         UIButton *subButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [subButton setTitle:itemsArray[i] forState:UIControlStateNormal];
+        
+        [self ac_modifyButtonTextInButton:subButton withText:self.itemsArray[i]];
+        
         [subButton addTarget:self action:@selector(touchButtonEvents:) forControlEvents:UIControlEventTouchDown];
         subButton.tag = i;
-        subButton.frame = CGRectMake(i*ItemWidth, 0, ItemWidth, ItemHeight);
+        subButton.frame = CGRectMake(i*itemWidth, 0, itemWidth, itemHeight);
         [self.buttonsArray addObject:subButton];
         [self.itemsScrollView addSubview:subButton];
     }
@@ -134,19 +150,39 @@
      */
     
     NSUInteger itemsCount = self.buttonsArray.count;
-    if (itemsCount <= IdealItemsCount) {
+    if (itemsCount <= self.idealItemsCount) {
         return;
     }
     
-    NSInteger compareCount = itemsCount - IdealItemsCount;
+    NSInteger compareCount = itemsCount - self.idealItemsCount;
     NSInteger adviceIndex = index - 2;
     
     if (adviceIndex <= compareCount) {
         //可以调整
         [UIView animateWithDuration:0.25 animations:^{
-            self.itemsScrollView.contentOffset = CGPointMake((adviceIndex*ItemWidth >= 0.0? adviceIndex*ItemWidth:0.0), 0);
+            self.itemsScrollView.contentOffset = CGPointMake((adviceIndex*itemWidth >= 0.0? adviceIndex*itemWidth:0.0), 0);
         }];
     }
 }
 
 @end
+
+@implementation ACTopBarView (ACTopBarViewSubClassHooks)
+
+- (void)ac_prepareOriganProperty{
+
+}
+
+- (void)ac_layoutSubViews{
+    
+}
+
+- (UIButton *)ac_modifyButtonTextInButton:(UIButton *)btn withText:(NSString *)str{
+
+    [btn setTitle:str forState:UIControlStateNormal];
+    
+    return btn;
+}
+
+@end
+
