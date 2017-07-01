@@ -18,6 +18,8 @@
 
 @implementation ACBoxPageControl
 
+@synthesize numberOfPages = _numberOfPages;
+
 - (instancetype)init
 {
     self = [super init];

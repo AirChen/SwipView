@@ -144,7 +144,6 @@
         UIImageView * imageView = [[UIImageView alloc]init];
         
         imageView.backgroundColor = [UIColor whiteColor];
-        UIImage * placImage = self.placImage?self.placImage:nil;
         imageView.image = [UIImage imageNamed:dic[@"image_url"]];
         imageView.frame = CGRectMake(self.scrollView.frame.size.width*i, 0, self.scrollView.frame.size.width,self.scrollView.frame.size.height);
         

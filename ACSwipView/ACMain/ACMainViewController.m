@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupScrollMainView];
+    [self setupListView];
 }
 
 - (void)setupLoopView
@@ -41,7 +41,7 @@
     ACAdsLoopView *view = [[ACAdsLoopView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
     
     NSMutableArray *itemArray = [NSMutableArray array];
-    for (NSUInteger i = 0; i < 12; i++) {
+    for (NSUInteger i = 0; i < 6; i++) {
         
         NSDictionary *dic = [NSDictionary dictionaryWithObject:@"Unknown" forKey:@"image_url"];
         [itemArray addObject:dic];
@@ -49,7 +49,7 @@
     
     view.models = itemArray;
     
-    view.layer.cornerRadius = 30;
+    view.layer.cornerRadius = 20;
     view.layer.masksToBounds = YES;
     
     [self.view addSubview:view];
