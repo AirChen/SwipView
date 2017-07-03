@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54906D591F09DB5E00E1E8D0 /* ACScrollViewGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54906D581F09DB5E00E1E8D0 /* ACScrollViewGenerator.m */; };
 		7F518A211E54016E0030DE25 /* ACAdsLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A201E54016E0030DE25 /* ACAdsLoopView.m */; };
 		7F518A241E5402C00030DE25 /* ACBoxPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A231E5402C00030DE25 /* ACBoxPageControl.m */; };
 		7F518A281E5448270030DE25 /* ACMultitudeImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F518A271E5448270030DE25 /* ACMultitudeImagesView.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54906D571F09DB5E00E1E8D0 /* ACScrollViewGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACScrollViewGenerator.h; sourceTree = "<group>"; };
+		54906D581F09DB5E00E1E8D0 /* ACScrollViewGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACScrollViewGenerator.m; sourceTree = "<group>"; };
 		6C7B61D65D7A9C0B7A923426 /* libPods-ACSwipView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACSwipView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F518A1F1E54016E0030DE25 /* ACAdsLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACAdsLoopView.h; sourceTree = "<group>"; };
 		7F518A201E54016E0030DE25 /* ACAdsLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAdsLoopView.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 			children = (
 				7F53EB1E1E481F2400728D85 /* ACMainScrollView.h */,
 				7F53EB1F1E481F2400728D85 /* ACMainScrollView.m */,
+				54906D571F09DB5E00E1E8D0 /* ACScrollViewGenerator.h */,
+				54906D581F09DB5E00E1E8D0 /* ACScrollViewGenerator.m */,
 				7F53EB211E481FC300728D85 /* ACTopBarView.h */,
 				7F53EB221E481FC300728D85 /* ACTopBarView.m */,
 				7F53EB2A1E485B0200728D85 /* ACCommonTableView.h */,
@@ -342,6 +347,7 @@
 				7F53EB271E4832D200728D85 /* ACTools.m in Sources */,
 				7F518A241E5402C00030DE25 /* ACBoxPageControl.m in Sources */,
 				7FB1FF161E45CC52002AEE10 /* ACMainViewController.m in Sources */,
+				54906D591F09DB5E00E1E8D0 /* ACScrollViewGenerator.m in Sources */,
 				7FB1FF011E45C4F4002AEE10 /* AppDelegate.m in Sources */,
 				7F53EB2C1E485B0200728D85 /* ACCommonTableView.m in Sources */,
 				7F9F93421E4C5A4A007D2EF3 /* ACListItemView.m in Sources */,

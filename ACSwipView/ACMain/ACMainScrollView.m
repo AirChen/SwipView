@@ -12,8 +12,6 @@
 
 @interface ACMainScrollView()<UIScrollViewDelegate>
 
-@property(nonatomic, strong)ACTopBarView *topBarView;
-
 @end
 
 @implementation ACMainScrollView
@@ -21,7 +19,7 @@
 - (ACTopBarView *)topBarView
 {
     if (!_topBarView) {
-        _topBarView = [[ACTopBarView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, TopBarHeight)];
+        _topBarView = [[ACTopBarView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.topBarHeight)];
         
         Weakify(self)
         _topBarView.itemsClicked = ^(NSUInteger index){
@@ -42,7 +40,6 @@
      
      创建topBar并添加
      */
-    
     if (!viewsArray || viewsArray.count == 0) {
         return;
     }
@@ -54,6 +51,7 @@
     for (NSUInteger i = 0; i < viewsCount; i++) {
         UIView *subView = viewsArray[i];
         subView.frame = CGRectMake(i*ScreenWidth, 0, ScreenWidth, ScreenHeight);
+        [subView setValue:[NSNumber numberWithFloat:self.topBarHeight] forKey:@"topBarHeight"];//kvc
         [self addSubview:subView];
         
         [itemsTitleArray addObject:[NSString stringWithFormat:@"item[%lu]",(unsigned long)i]];
@@ -91,6 +89,7 @@
     self.bounces = NO;
     self.pagingEnabled = YES;
     self.showsHorizontalScrollIndicator = NO;
+    self.topBarHeight = self.topBarHeight * 1 == 0 ? TopBarHeight : self.topBarHeight;
 }
 
 #pragma mark - notification
@@ -114,10 +113,12 @@
     CGSize topViewSize = self.topBarView.frame.size;
     CGPoint topViewPoint = self.topBarView.frame.origin;
     
-    if (offsetY <= -ItemsBarHeight) {
-        self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight+offsetY), topViewSize.width, topViewSize.height);
+    CGFloat itemsBarHeight = self.topBarView.itemBarHeight;
+    
+    if (offsetY <= -itemsBarHeight) {
+        self.topBarView.frame = CGRectMake(topViewPoint.x, -(self.topBarHeight+offsetY), topViewSize.width, topViewSize.height);
     }else{
-        self.topBarView.frame = CGRectMake(topViewPoint.x, -(TopBarHeight-ItemsBarHeight), topViewSize.width, topViewSize.height);
+        self.topBarView.frame = CGRectMake(topViewPoint.x, -(self.topBarHeight-itemsBarHeight), topViewSize.width, topViewSize.height);
     }
 }
 

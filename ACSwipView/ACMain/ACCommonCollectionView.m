@@ -49,7 +49,8 @@
     self.delegate = self;
     self.dataSource = self;
     
-    self.contentInset = UIEdgeInsetsMake(TopBarHeight, 0, 0, 0);
+    self.topBarHeight = self.topBarHeight * 1 == 0 ? TopBarHeight : self.topBarHeight;
+    self.contentInset = UIEdgeInsetsMake(self.topBarHeight, 0, 0, 0);
     
     self.backgroundColor = [UIColor orangeColor];
     

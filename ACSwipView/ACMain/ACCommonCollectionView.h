@@ -14,6 +14,7 @@
  字符串数组
  */
 @property (nonatomic, copy)NSArray *itemsArray;
+@property (nonatomic, readwrite, assign) CGFloat topBarHeight;
 
 @end
 

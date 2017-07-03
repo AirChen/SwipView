@@ -8,6 +8,7 @@
 
 #import "ACCommonTableView.h"
 #import "GoldHeader.h"
+#import "ACTopBarView.h"
 
 @interface ACCommonTableView()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
@@ -41,8 +42,9 @@
     self.delegate = self;
     self.dataSource = self;
     
-    self.contentInset = UIEdgeInsetsMake(TopBarHeight, 0, 0, 0);
-    self.beginOffsetY = -TopBarHeight;
+    self.topBarHeight = self.topBarHeight * 1 == 0 ? TopBarHeight : self.topBarHeight;
+    self.contentInset = UIEdgeInsetsMake(self.topBarHeight, 0, 0, 0);
+    self.beginOffsetY = -self.topBarHeight;
     
     [self ac_prepareOriganProperty];
 }
@@ -94,6 +96,7 @@
 {
     self.beginOffsetY = self.contentOffset.y;
 }
+
 @end
 
 @implementation ACCommonTableView(ACCommonTableViewSubClassHooks)
